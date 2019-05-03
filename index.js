@@ -1,8 +1,8 @@
-let a = 5;
-let b = 1;
-a++;
-// Add your code below this line
-console.log(a);
-
-let sumAB = a + b;
-console.log(sumAB);
+const increment = (function() {
+  "use strict";
+  return function increment(number, value = 1) {
+    return number + value;
+  };
+})();
+console.log(increment(5, 2)); // returns 7
+console.log(increment(5)); // returns NaN
